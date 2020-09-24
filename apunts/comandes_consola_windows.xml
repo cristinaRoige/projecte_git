@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<article xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <info>
+        <title>Comandes terminal Windows</title>
+        <author>
+            <personname>
+                <firstname>Cristina</firstname>
+                <surname>Roigé Gaja</surname>
+            </personname>
+        </author>
+    </info>
+    <sect1>
+        <title>Comandes bàsiques</title>
+        <para>
+            <table frame="all">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="2.51*"/>
+                    <thead>
+                        <row>
+                            <entry>COMANDA</entry>
+                            <entry>DESCRIPCIÓ</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>CD</entry>
+                            <entry>Canvia el directori o carpeta , *cd&lt; RutaDirectori >* per anar
+                                al directori o carpeta concreta que li diguis, o *cd..* per sortir
+                                d'unacarpeta i anar al nivell superior on eres.</entry>
+                        </row>
+                        <row>
+                            <entry>DIR</entry>
+                            <entry>Llista el contingut del directori o carpeta on et trobes.
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>TREE NOMDIRECTORI</entry>
+                            <entry>Mostra l'arbre de directoris d'una carpeta concreta</entry>
+                        </row>
+                        <row>
+                            <entry>CLS</entry>
+                            <entry>Neteja la consola de Windows </entry>
+                        </row>
+                        <row>
+                            <entry>EXIT</entry>
+                            <entry>Tanca la finestra de la consola</entry>
+                        </row>
+                        <row>
+                            <entry>HELP</entry>
+                            <entry>Mostra totes les comandes que hi ha disponibles amb una breu
+                                descripció</entry>
+                        </row>
+                        <row>
+                            <entry>COPY ARXIUDESTI</entry>
+                            <entry>Còpia un o més arxius a la direcció de destí</entry>
+                        </row>
+                        <row>
+                            <entry>ROBOCOPY</entry>
+                            <entry>Funció millorada que permet aturar la còpia, cancelar-la o
+                                continuar copiant, per arxius pesats</entry>
+                        </row>
+                        <row>
+                            <entry>MOVE ARXIUDESTI</entry>
+                            <entry>Mou l'arxiu concret a la direcció de destí</entry>
+                        </row>
+                        <row>
+                            <entry>DEL ARXIU_O_CARPETA</entry>
+                            <entry>Esborra l'arxiu o carpeta que li diguis.</entry>
+                        </row>
+                        <row>
+                            <entry>RENAME ARXIU</entry>
+                            <entry>Canvia el nom de l'arxiu </entry>
+                        </row>
+                        <row>
+                            <entry>MD NOMCARPETA</entry>
+                            <entry>Crea una carpeta amb el nom que li diguis a la direcio que et
+                                troves</entry>
+                        </row>
+                        <row>
+                            <entry>TYPE ARXIU.EXTENSIO</entry>
+                            <entry>Crea un arxiu amb text interior</entry>
+                        </row>
+                        <row>
+                            <entry>FORMAT</entry>
+                            <entry>Formateja la unitat (és perillos).</entry>
+                        </row>
+                       
+                    </tbody>
+                </tgroup>
+            </table>
+        </para>
+    </sect1>
+    <sect1>
+        <title>Comandes de diagnòstic</title>
+        <para>
+            <table frame="all">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>COMANDA</entry>
+                            <entry>DESCRIPCIO</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>SYSTEMINFO</entry>
+                            <entry>Obté informació sobre el sistema</entry>
+                        </row>
+                        <row>
+                            <entry>CHKDSK</entry>
+                            <entry>Analitza superfície del disc dur per detectar possibles sectors
+                                defectuosos i fa comprovacions lògiques del sistema
+                                d'arxius.</entry>
+                        </row>
+                        <row>
+                            <entry>IPCONFIG</entry>
+                            <entry>Obté informació sobre la connexió de xarxa, mostra IP, màscara de
+                                subxarxa o la porta d'enllaç per defecte.</entry>
+                        </row>
+                        <row>
+                            <entry>NETSTAT</entry>
+                            <entry>Analitza i mostra les estadístiques del protocol i les connexions
+                                TCP/IP en us per els dispositius.</entry>
+                        </row>
+                        <row>
+                            <entry>TRACERT DIRECCIOHOST</entry>
+                            <entry>T'ajuda a saber el camí que segueix la teva connexió fins arribar
+                                al host que li diguis </entry>
+                        </row>
+                        <row>
+                            <entry>GETMAC</entry>
+                            <entry>Mostra la direcció MAC del teu ordinador</entry>
+                        </row>
+                        <row>
+                            <entry>VER</entry>
+                            <entry>Mostra la versió exacta del sistema operatiu</entry>
+                        </row>
+                        <row>
+                            <entry>CONTROL PANEL</entry>
+                            <entry>Comanda que serveix com accés directe i que obre directament el
+                                panell de control de Windows sense que el tinguis que
+                                buscar.</entry>
+                        </row>
+                        <row>
+                            <entry>TIME</entry>
+                            <entry>Mostra l'hora exacta de l'ordinador</entry>
+                        </row>
+                        <row>
+                            <entry>DRIVERQUERY</entry>
+                            <entry>Mostra la llista completa de tots els drivers que tens
+                                instal·lats a l'ordinador, amb el seu nom, mòdul, nom complet i
+                                tipus de controlador que es tracta</entry>
+                        </row>
+                        <row>
+                            <entry>TASKLIST</entry>
+                            <entry>Mostra la llista completa de tots els procesos que tens en
+                                execució en el sistema, així com la quantitat de memòria que esta
+                                utilitzant cada un d'ells. </entry>
+                        </row>
+                        <row>
+                            <entry>TASKKILL/PID NUMEROIDDEPROCES</entry>
+                            <entry>Amb TASKLIST s'assigna un PID o identificador de procés, amb
+                                aquesta comanda es pot tancar el procés indicat.</entry>
+                        </row>
+                        <row>
+                            <entry>SFC</entry>
+                            <entry>Examina l'integritat de tots els arxius del teu sistema i
+                                substitueix els que detecta que estiguin malmesos utilitzant còpies
+                                en caché del sistema. (permís administrador)</entry>
+                        </row>
+                        <row>
+                            <entry>CLEANMGR</entry>
+                            <entry>Apareix una finestra emergent demanant que seleccionis una unitat
+                                de disc, el que hauràs fet és llançar l'aplicació de Windows per
+                                alliberar espai</entry>
+                        </row>
+                        <row>
+                            <entry>WINSAT FORMAL</entry>
+                            <entry>Executa un benchmark complet que analitza el rendiment de l'equip
+                                i tots els seus components. Aquesta comanda també pot acompanyarse
+                                d'altres cognoms a part de FORMAL, com CPUFORMAL per mesurar el
+                                rendiment de la CPU, MEMFORMAL per la RAM, GRAPHICSFORMAL per la
+                                targeta gràfica o DISKFORMAL per les unitats
+                                d'emmagatzemament.</entry>
+                        </row>
+                        <row>
+                            <entry>DEFRAG</entry>
+                            <entry>Inicia la desfragmentació del disc dur que li indiquis, igual que
+                                l'aplicació nativa que Windows té per això</entry>
+                        </row>
+                        <row>
+                            <entry>DISKPART</entry>
+                            <entry>Amb el cognom LIST o LIST VOLUME obté un llistat dels discs o
+                                volums de l'equip. amb aquesta funció per gestionar les particions i
+                                discs durs.</entry>
+                        </row>
+                        <row>
+                            <entry>SHUTDOWN</entry>
+                            <entry>Serveix per apagar l'ordinador directament des de la consola de
+                                comandes de Windows. Pots afegir el atribut -s -t TempsEnSegons per
+                                programar l'apagada o SHUTDOWN -R per reiniciar l'ordinador.</entry>
+                        </row>
+                        <row>
+                            <entry>LOGOFF</entry>
+                            <entry>Tanca la sessió d'usuari que estas accedint a l'ordinador encara
+                                que l'ordinador estigui encés.</entry>
+                        </row>
+                       
+                    </tbody>
+                </tgroup>
+            </table>
+        </para>
+    </sect1>
+</article>

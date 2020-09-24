@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<article xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <info>
+        <title>Comandes terminal Linux</title>
+        <author>
+            <personname>
+                <firstname>Cristina</firstname>
+                <surname>Roigé Gaja</surname>
+            </personname>
+        </author>
+    </info>
+    <sect1>
+        <title>Informació del sistema</title>
+        <para>
+            <table frame="all">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>COMANDA</entry>
+                            <entry>DESCRIPCIÓ</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><emphasis role="bold">arch</emphasis>:</entry>
+                            <entry>mostrar l'arquitectura de la màquina (1).</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">uname -m</emphasis></entry>
+                            <entry>mostrar l'arquitectura de la màquina (2).</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">uname -r</emphasis></entry>
+                            <entry>mostrar la versió de l'nucli usat.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">dmidecode -q</emphasis></entry>
+                            <entry>mostrar els components (maquinari) de el sistema.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">hdparm -i /dev/hda</emphasis></entry>
+                            <entry>mostrar les característiques d'un disc dur.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">hdparm -tT /dev/sda</emphasis></entry>
+                            <entry>realitzar prova de lectura en un disc dur.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cat /proc/cpuinfo</emphasis></entry>
+                            <entry>mostrar informació de la CPU.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cat /proc/interrupts</emphasis></entry>
+                            <entry>mostrar les interrupcions.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cat /proc/meminfo</emphasis></entry>
+                            <entry>verificar el uso de memoria.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cat /proc/swaps</emphasis></entry>
+                            <entry>mostrar fitxers swap.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cat /proc/version</emphasis></entry>
+                            <entry>mostrar la versió del kernel.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cat /proc/net/dev</emphasis></entry>
+                            <entry>mostrar adaptador de xarxa i estadístiques</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cat /proc/mounts</emphasis></entry>
+                            <entry>mostra sistema de fitxers montant</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">lspci -tv</emphasis></entry>
+                            <entry>mostra dispositius PCI</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">lsusb -tv</emphasis></entry>
+                            <entry>mostra els dispositius USB</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">date</emphasis></entry>
+                            <entry>mostra la data del sistema</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cal 2011</emphasis></entry>
+                            <entry>mostra el calendari 2011</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cal 07 2011</emphasis></entry>
+                            <entry>mostra el calendari de juliol de 2011</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">date 041217002011.00</emphasis></entry>
+                            <entry>declara data i hora</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">clock -w</emphasis></entry>
+                            <entry>guarda els canvis de la data a la BIOS</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </para>
+    </sect1>
+    <sect1>
+        <title>Apagar sistema o tancar sessió</title>
+        <para>
+            <table frame="all">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>COMANDA</entry>
+                            <entry>DESCRIPCIÓ</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><emphasis role="bold">shutdown -h now</emphasis></entry>
+                            <entry>Apagar el sistema</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">init 0</emphasis></entry>
+                            <entry>apagar el sistema</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">telinit 0</emphasis></entry>
+                            <entry>apagar el sistema</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">halt</emphasis></entry>
+                            <entry>apagar el sistema</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">shutdown -h hours:minutes
+                                &amp;</emphasis></entry>
+                            <entry>apagar el sistema planificat</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">shutdown -c</emphasis></entry>
+                            <entry>cancelar un apagat planificat del sistema</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">shutdown -r now</emphasis></entry>
+                            <entry>reiniciar</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">reboot</emphasis></entry>
+                            <entry>reiniciar</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">logout</emphasis></entry>
+                            <entry>tancar sessió</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </para>
+    </sect1>
+    <sect1>
+        <title>Arxius I directoris</title>
+        <para>
+            <table frame="all">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>COMANDA</entry>
+                            <entry>DESCRIPCIO</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><emphasis role="bold">cd /home</emphasis></entry>
+                            <entry>entrar en el directori "home".</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cd ..</emphasis></entry>
+                            <entry>retrocedir un nivell</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cd ../..</emphasis>:</entry>
+                            <entry>retrocedir 2 nivells</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cd</emphasis></entry>
+                            <entry>anar a l'arrel /</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cd ~user1</emphasis></entry>
+                            <entry>anar al directori user1</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cd –</emphasis></entry>
+                            <entry>anar al directori anterior</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">pwd</emphasis></entry>
+                            <entry>mostrar el directori</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">ls</emphasis></entry>
+                            <entry>veure els fitxers d'un direcotir</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">ls -F</emphasis></entry>
+                            <entry>veure els fitxers del directori</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">ls -l</emphasis></entry>
+                            <entry>mostrar els detalls de fitxers I carpetes d'un directori</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">ls -a</emphasis></entry>
+                            <entry>mostrar fitxers ocults</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">ls *[0-9]</emphasis>*</entry>
+                            <entry>mostrar els fitxers I carpetes que contenen números</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">tree</emphasis></entry>
+                            <entry>mostrar els fitxers I carpetes en forma d'arbre comenánt per
+                                l'arrel</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">lstree</emphasis></entry>
+                            <entry>mostrar els fitxers I carpetes en forma d'arbre comenánt per
+                                l'arrel</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">mkdir dir1</emphasis></entry>
+                            <entry>crear una carpeta o directori amb nom dir1</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">mkdir dir1 dir2</emphasis></entry>
+                            <entry>crear dues carpetes a la vegada dir1 I dir2</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">mkdir -p /tmp/dir1/dir2</emphasis></entry>
+                            <entry>crea un arbre de directoris</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">rm -f file1</emphasis></entry>
+                            <entry>esborrar el fitxer file1</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">rmdir dir1</emphasis></entry>
+                            <entry>esborrar la carpeta dir1</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">rm -rf dir1</emphasis></entry>
+                            <entry>eliminar la carpeta dir1 amb el seu contingut de forma
+                                recursiva.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">rm -rf dir1 dir2</emphasis></entry>
+                            <entry>esborra dues carpetes amb el seu contingut de forma
+                                recursiva</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">mv dir1 new_dir</emphasis></entry>
+                            <entry>canvia el nom o mou un fitxer o directori</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cp file1</emphasis></entry>
+                            <entry>copia un fitxer</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cp file1 file2</emphasis></entry>
+                            <entry>copia 2 fitxers</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cp dir /*</emphasis></entry>
+                            <entry>copia tots els fitxers d'un directori dins del directori de
+                                treball actual</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cp -a /tmp/dir1</emphasis></entry>
+                            <entry>copia un directori dins del directori actual de treball</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cp -a dir1</emphasis></entry>
+                            <entry>copia un directori</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">cp -a dir1 dir2</emphasis></entry>
+                            <entry>copia dos directoris a la vegada</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">ln -s file1 lnk1</emphasis></entry>
+                            <entry>crea un enllaç simbòlic al fitxer o directori</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">ln file1 lnk1</emphasis></entry>
+                            <entry>crea un enllaç físic al fitxer o directori</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">touch -t 0712250000
+                                file1</emphasis></entry>
+                            <entry>modifica el temps real de creació d'un fitxer o directori</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">file file1</emphasis></entry>
+                            <entry>sortida (volcant en pantalla) del tipus mime d'un fitxer de
+                                text</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">iconv -l</emphasis></entry>
+                            <entry>llista xifrats coneguts</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">iconv -f fromEncoding -t toEncoding
+                                    inputFile > outputFile</emphasis></entry>
+                            <entry>crea una nova forma del fitxer d'entrada asumint que està
+                                codificat en fromEncoding I convertint-lo a ToEncoding.</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">find . -maxdepth 1 -name *.jpg -print -exec
+                                    convert ”{}” -resize 80×60 “thumbs/{}” \;</emphasis></entry>
+                            <entry>agrupar fitxers redimensionats en el directori actual I
+                                enviar-los a directoris de vistas de miniatures.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </para>
+    </sect1>
+    <sect1>
+        <title>Trobar arxius</title>
+        <para>
+            <table frame="all">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>COMANDA</entry>
+                            <entry>DESCRIPCIÓ</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><emphasis role="bold">find / -name file1</emphasis></entry>
+                            <entry>busca un fitxer I directori a partir de l'arrel del
+                                sistema</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">find / -user user1</emphasis></entry>
+                            <entry>busca fitxer I directoris que pertanyin a 'user1'</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">find /home/user1 -name
+                                \*.bin</emphasis></entry>
+                            <entry>busca els fitxers amb extensió '.bin' dins el directori
+                                7home7user1</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">find /usr/bin -type f -atime
+                                    +100</emphasis></entry>
+                            <entry>busca fitxers binaris no utilitzats en els últims 100
+                                dies</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">find /usr/bin -type f -mtime
+                                -10</emphasis></entry>
+                            <entry>busca fitxers creats o cambiats dins els últims 10 dies</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">find / -name \*.rpm -exec chmod 755 ‘{}’
+                                    \;</emphasis></entry>
+                            <entry>busca fitxers amb estensió '.rmp' I modifica permisos</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">find / -xdev -name
+                                \*.rpm</emphasis></entry>
+                            <entry>busca fitxers amb extensió '.rpm' ignorant els dispositius
+                                extraibles com el cdrom, pen-drive ...</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">locate \*.ps</emphasis></entry>
+                            <entry>troba els fitxers '.ps' executats primerament amb la comanda
+                                command 'updatedb'</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">whereis halt</emphasis></entry>
+                            <entry>mostra l'ubicació de fitxer binari d'ajuda o font en aquest cas
+                                halt</entry>
+                        </row>
+                        <row>
+                            <entry><emphasis role="bold">which halt</emphasis></entry>
+                            <entry>mostra el camí complet a un binari /executable</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </para>
+    </sect1>
+    <sect1>
+        <title></title>https://blog.desdelinux.net/mas-de-400-comandos-para-gnulinux-que-deberias-conocer/
+        <para></para>
+    </sect1>
+</article>

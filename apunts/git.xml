@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.0/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<article xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <info>
+        <title>Comandes terminal Windows</title>
+        <author>
+            <personname>
+                <firstname>Cristina</firstname>
+                <surname>Roigé Gaja</surname>
+            </personname>
+        </author>
+    </info>
+    <sect1>
+        <title>Que és git</title>
+        <para>Git és un programa de control de versions que ha estat pensat per tindre una gran
+            eficiència i confiabilitat del manteniment de versions de les nostres
+            aplicacions.</para>
+        <para>Git l'utilitzarem per tindre control i registrar els canvis realitzats sobre un o
+            diversos arxius de manera que si ens equivoquem o volem recuperar alguna versió antigua
+            ho tinguem més fàcil que gestionant còpies de seguretat a pel.</para>
+    </sect1>
+    <sect1>
+        <title>Instal·lar GIT a Windows</title>
+        <para>Per instal·lar GIT a windows una de les maneres que hi ha és anant a la següent pàgina
+                <link xlink:href="https://git-scm.com/"/> i descarregar la versió de Windows. un cop
+            descarregat a baixades executarem el fitxer i el configurarem com volguem.</para>
+        <para>Un cop instal·lat podem veure la versió que tinguem instal·lada</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/001.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para/>
+    </sect1>
+    <sect1>
+        <title>Configurar git</title>
+        <para>Quan instal·lem GIT entre altres també s'ens instala GIT bash que es una
+            consola.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/002.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/003.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Aquí també podem veure la versió que tenim de GIT amb la comanda<code> GIT
+                --version</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/004.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Configurarem GIT amb el nom d'usuari i el compte de correu electrónic ja que tots els
+            commits de GIT utilitzaran aquesta informació.</para>
+        <para><code>git config –-global user.name "nom usuari"</code></para>
+        <para><code>git config --global user.email nomUsuari@organitzacio.tipus</code>
+        </para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/005.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Amb la variable <code>--global</code> GIT utilitza informació per tot el sistema.
+            també podem configurar:</para>
+        <itemizedlist>
+            <listitem>
+                <para>Editor de text →<code> git config –-global core.editor nomEditor</code></para>
+            </listitem>
+            <listitem>
+                <para>Eina per resoldre conflictes per resoldre <emphasis role="bold"
+                        >merge</emphasis> → <code>git config –-global merge.tool
+                    nomEina</code></para>
+            </listitem>
+        </itemizedlist>
+        <para>Per comprovar la configuració hem de fer la següent comanda → <code>git config –-list
+            </code></para>
+        <para>Per poder veure les comandes que té GIT → <code>git help </code></para>
+    </sect1>
+    <sect1>
+        <title>Crear repositori</title>
+        <para>Per crear un repositori el primer que hem fet és crear una carpeta a qualsevol lloc
+            que volguem i dins aquesta hem fet els següents fitxers:</para>
+        <itemizedlist>
+            <listitem>
+                <para>Carpeta apunts en aquesta carpeta hi hauran els apunts que estic fent per
+                    GIT.</para>
+            </listitem>
+            <listitem>
+                <para>Carpeta projecte on hi haurà un exemple de projecte web</para>
+            </listitem>
+        </itemizedlist>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/006.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>De moment tenim text a index.htmli pagina1.html</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/007.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/008.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Per iniciar un repositori (projecte) anirem a la carpeta que tinguem el
+            projecte:</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/009.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/010.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Per iniciar un repositori hem d'escriure la comanda de GIT → <code>git init</code>
+            podem veure que s'ens ha creat una carpeta oculta que es diu .git.</para>
+        <para>Per llistar els fitxer la comanda és <code>ls</code> i si volem veure els fitxers
+            ocults <code>ls -la</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/011.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/012.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para/>
+    </sect1>
+    <sect1>
+        <title>Clonar repositoris</title>
+        <para>Podem crear un repositori clonant un que ja existeixi i es pot fer de dues formes o
+            clonant un repositori local o bé un repositori remot.</para>
+        <para>Clonar repositori local → <code>git clone ./rutaRelativa nomNovaCarpeta.</code> es
+            clonarà però es clonarà buit.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/013.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Per clonar un repositori que tinguem  a internet:</para>
+        <para>
+            <code>git clone https://github.com/nomrepositori/nomProjecte.git
+                ./nomNovaCarpeta.</code>
+        </para>
+        <para>Podem veure que el nostre repositori es clonarà.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/015.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+    </sect1>
+    <sect1>
+        <title>Espai de treball a GIT</title>
+        <para>La comanda <code>git status</code> mostra tot el que hi ha dins de l'index.</para>
+        <para>Ens indica a quina branca estem, en aquest cas la branch master ens diu que no hem fet
+            cap commit i els untracked files (fitxers que no estan inclosos per fer el commit,
+            directori de treball).</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/016.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si volem fer un commit amb algun d'aquest fitxers el que hem de fer es fer servir la
+            següent comanda:</para>
+        <para><code>git add nomCarpetaODirectori</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/017.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si ara fem un <code>git status</code> podem veure la safata de sortida (stading index)
+            els fitxers i carpetes que estan apunt de rebre el commit.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/018.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>També podem veure untracked files. aquestes carpetes i fitxers estan pendents de
+            passar a la safata de sortida i si ara mateix fessim un commit aquest fitxers no
+            s'inclourien en aquest.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/019.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si volguessim esborrar algun fitxer de la safata de sortida i no incloure'l en el
+            següent commit hauriem de fer servir la comanda:</para>
+        <para><code>git rm –-cached &lt;nomArxiuODirectori></code></para>
+        <para>Si volguessim afegir tots els fitxers de cop al següent commit fariem servir la
+            comanda </para>
+        <para><code>git add .</code></para>
+    </sect1>
+    <sect1>
+        <title>status add dif</title>
+        <para>Si fem dos canvis als fitxers index.html i pagina1.html i després fem un GIT status
+            podem veure que aquests dos fitxers estàn al nostre directori de treball i no estaran
+            inclosos en el commit. si fem GIT add al fitxer index.html podem veure que només ens
+            queda el fitxer pagina1.html al directori de treball.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/020.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/021.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/022.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si no ens agraden els canvis que hem fet en aquesta pàgina poem utilitzar la comanda </para>
+        <para><code>git checkout pagina1.html</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/023.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>podem veure que a la safata de sortida ja no ens hi queda res.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/024.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si tornem a fer canvis a la pàgina1.html guardem i a la consola tornem a fer GIT
+            status podem veure que la pagina1.html s'ha modificat.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/025.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si volem veure els canvis que s'han produït hem d'utilitzar la comanda</para>
+        <para><code>git diff nomCarpetaOArxiu</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/026.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>En vermell podem veure com estava abans i en verd com està ara.</para>
+    </sect1>
+</article>

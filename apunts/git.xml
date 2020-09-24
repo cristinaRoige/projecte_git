@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://docbook.org/xml/5.0/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://docbook.org/xml/5.0/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<article xmlns="http://docbook.org/ns/docbook"
-    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="5.0">
     <info>
         <title>Comandes terminal Windows</title>
         <author>
@@ -149,7 +149,7 @@
                     <imagedata fileref="img/013.jpg" align="center" scale="100"/>
                 </imageobject>
             </inlinemediaobject></para>
-        <para>Per clonar un repositori que tinguem  a internet:</para>
+        <para>Per clonar un repositori que tinguem a internet:</para>
         <para>
             <code>git clone https://github.com/nomrepositori/nomProjecte.git
                 ./nomNovaCarpeta.</code>
@@ -203,7 +203,7 @@
         <para><code>git add .</code></para>
     </sect1>
     <sect1>
-        <title>status add dif</title>
+        <title>Comandes status add dif</title>
         <para>Si fem dos canvis als fitxers index.html i pagina1.html i després fem un GIT status
             podem veure que aquests dos fitxers estàn al nostre directori de treball i no estaran
             inclosos en el commit. si fem GIT add al fitxer index.html podem veure que només ens
@@ -251,5 +251,93 @@
                 </imageobject>
             </inlinemediaobject></para>
         <para>En vermell podem veure com estava abans i en verd com està ara.</para>
+    </sect1>
+    <sect1>
+        <title>fitxer gitignore</title>
+        <para>El fitxer gitignore serveix perquè una carpeta o arxiu no es guardi mai en un
+            commit.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/027.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>hem d'escriure la ruta de la carpeta des del directori de treball</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/028.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si fem <code>git status</code> ara podem veure aquest fitxer que podem fer commit i
+            que evita que els fitxers que estan dins no s'afegeixin mai.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/029.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+    </sect1>
+    <sect1>
+        <title>Comanda commit i versions</title>
+        <para>Un commit és una versió del programa actual, un punt de partida al nostre codi que
+            podrem tornar sempre que volguem i comparar-lo amb altres versions que tinguem. </para>
+        <para>Un cop tinguem tots els fitxers a la safata de sortida després de fer un add hem
+            d'utlitzar la següent comanda:</para>
+        <para><code>git commit -m "comentari identificatiu del comit actual"</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/030.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si fem git status veiem que no hi ha cap commit per fer.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/031.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si fem servir la comanda</para>
+        <para><code>git log --oneline</code> veurem aquest commit.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/032.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si fem <code>git log</code> podrem veure tota la informació del commit</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/033.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si fem canvis al fitxer index.html i al fitxer pagina1.html podem <emphasis>si estem
+                molt segurs que podem fer els canvis</emphasis> podem fer servir la comanda
+                <code>git commit -am "comentari identificatiu del commit actual</code>.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/034.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si tornem a fer <code>git log</code> podem veure l'historial dels commits.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/035.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Per comparar dos commits es fa servir la comanda <code>git diff idCommit1
+                idCommit2</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/036.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Podem veure els canvis que hi ha hagut entre els dos commits. en vermell el que s'ha
+            canviat en verd el que s'ha eliminat.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/037.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para/>
+    </sect1>
+    <sect1>
+        <title>Comandes reset i checkout</title>
+        <para></para>
     </sect1>
 </article>

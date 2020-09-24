@@ -419,6 +419,82 @@
     </sect1>
     <sect1>
         <title>Buscar un commit </title>
-        <para></para>
+        <para>Per buscar un commit en concret </para>
+        <para><code>git log --grep="paraules clau"</code></para>
+        <para><code>git log --oneline --grep="paraules clau"</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/048.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>També podem buscar els commits per el contingut dels fitxers.</para>
+        <para><code>git log -S "paraules clau"</code></para>
+        <para><code>git log --oneline -S "paraules clau"</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/049.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para/>
+    </sect1>
+    <sect1>
+        <title>Branch</title>
+        <para>Les branques (blanch) de desenvolupament permeten ramificar el nostre projecte I
+            tindre diferents línies de desenvolupament, podent desenvolupar altres funcionalitats
+            sense que unes interfereixin amb les altres.</para>
+        <para>El més normal és tindre una branch master I mentres anem desenvolupant el projecte
+            sorgeixen noves funcionalitats I nosaltres no volem barrejar aquestes funcionalitats amb
+            la branch master o qualsevol altre branca de desenvolupament.</para>
+        <para>Per crear una nova branca farem servir:</para>
+        <para><code>git branch nomBranca</code></para>
+        <para>Per veure si s'ha creat la branca:</para>
+        <para><code>git branch</code></para>
+        <para>Per canviar d'una branca a una altra branca</para>
+        <para><code>git checkout nomBranca</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/050.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Fem els canvis preparem I fem el commit I quan fem git log --oneline podem veure que
+            estem a la branca que hem creat que allí hem fet el nostre commit. I la branca master I
+            la branca pagina1 no es el mateix.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/051.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Crearem una branca nova per veure la comanda d'esborrar. aquesta branca es dirà
+            brancaError</para>
+        <para><code>git branch -D nomBrancaAEsborrar</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/052.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si hi hagués algun commit fet dins la branca no ens ho deixaria esborrar ni canviar de
+            branca I primer ens faria un commit.</para>
+        <para>Quan hagim acabat de treballar a una branca I volguem passar el nostre codi a la
+            branca master haurem d'anar a la nostra branca principal I fer un merge, el merge també
+            serveix per passar el codi de la branca master a la branca que esteu treballant.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/053.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><code>git merge nomBranca</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/054.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si ara faig un git log veurem que haurem importat els commits fets a la branca que hem
+            importat a la branca master.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/055.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para/>
     </sect1>
 </article>

@@ -338,6 +338,24 @@
     </sect1>
     <sect1>
         <title>Comandes reset i checkout</title>
+        <para>Si fem un canvi a un fitxer, per exemple a index.html si per error fem la comanda
+                <code>git add .</code> I ens adonem que ens hem equivocat I el volem tornar al
+            directori de treball podem fer servir la comanda <code>git reset HEAD nomFitxer</code> o
+            bé també podem fer servir la comanda <code>git reset .</code> o bé <code>git checkout
+                nomFitxer</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/038.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/039.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+    </sect1>
+    <sect1>
+        <title>Desfer un commit</title>
         <para></para>
     </sect1>
 </article>

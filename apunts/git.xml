@@ -570,14 +570,14 @@
     <sect1>
         <title>Comanda cherry-pick</title>
         <para></para>
-        <para>La comanda cherry-pick serveix per fer un merge parcial, això significa que podem estar
-            treballant en una branca, fer la nostra feina amb els commits que ens convinguin i en un
-            moment donat tindre que tornar a la branca que sigui i tindre que exportar només alguns
-            canvis dels que s'estaven fent. </para>
+        <para>La comanda cherry-pick serveix per fer un merge parcial, això significa que podem
+            estar treballant en una branca, fer la nostra feina amb els commits que ens convinguin i
+            en un moment donat tindre que tornar a la branca que sigui i tindre que exportar només
+            alguns canvis dels que s'estaven fent. </para>
         <para>A continuació farem un exemple de la comanda cherry-pick</para>
         <orderedlist>
             <listitem>
-                <para>Mirem a la branca que estem I com ho tenim.</para>
+                <para>Mirem a la branca que estem i com ho tenim.</para>
                 <figure>
                     <title><code>comanda → git status</code>.</title>
                     <mediaobject>
@@ -588,8 +588,153 @@
                 </figure>
             </listitem>
             <listitem>
-                <para>Crearem un altre full que anomenarem contacte.html i a la pàgina index.html crearem un link per anar aquesta fulla</para>
+                <para>Crearem un altre full que anomenarem contacte.html i a la pàgina index.html
+                    crearem un link per anar aquesta fulla i tornarem a mirar com tenim el nostre
+                    directori de treball (working directory) i el nostre index (stage)</para>
+                <figure>
+                    <title><code>comanda → git status</code>.</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/068.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Preparem els dos arxius per el commit</para>
+                <figure>
+                    <title><code>comanda → git add nomArxiu nomArxiu</code>.</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/069.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Fem el commit</para>
+                <figure>
+                    <title><code>comanda → git commit -m "missatge descriptiu
+                        commit"</code>.</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/070.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Crearem una nova branca per crear un formulari de contacte</para>
+                <figure>
+                    <title><code>comanda → git add nomArxiu nomArxiu</code>.</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/071.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Mirarem com tenim el directori de treball i les branch</para>
+                <figure>
+                    <title><code>comanda → git status</code>. i <code>git branch</code></title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/072.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Ens canviarem de branca</para>
+                <figure>
+                    <title><code>comanda → git checkout nomBrancaACanviar</code>. i <code>git
+                            status</code></title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/073.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Afegim un quants commits des d'aquesta branca comprovem el directori de
+                    treball i els commits que hem fet. veiem que hem fet un formulari amb nom i
+                    contrasenya i un submit </para>
+                <figure>
+                    <title><code>comanda → git status</code>. i <code>git log
+                        --oneline</code></title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/074.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Ens canviarem de branca</para>
+                <figure>
+                    <title><code>comanda → git checkout nomBrancaACanviar</code>. i <code>git
+                        status</code></title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/075.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Si mirem els commits podem comparar les dues branques, podem veure que a la
+                    branca master no hi ha els commits que hem fet a la branca contacte.</para>
+                <figure>
+                    <title>comanda →<code> git log --oneline</code></title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/076.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Volem que els commits referents al formulari passin a la branca master, però
+                    que els que afegeixen els 3 paràgraf no.</para>
+                <figure>
+                    <title>comanda →<code> git cherry-pick idCommit</code></title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/077.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Veurem que hi ha un conflicte I l'haurem de resoldre (com resoldre conflictes
+                    s'explica després) el resolem, (només es resol a la branca master).</para>
+                <figure>
+                    <title>comanda →<code> git status</code></title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/078.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Un cop resolt el conflicte ja podrem fer el commit </para>
+                <figure>
+                    <title>comanda →<code> git add .</code> I <code>git commit -m "missatge
+                            descriptiu commit"</code></title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/078.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
             </listitem>
         </orderedlist>
+    </sect1>
+    <sect1>
+        <title>Resolució de conflictes.</title>
+        <para></para>
     </sect1>
 </article>

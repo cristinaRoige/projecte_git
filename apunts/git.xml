@@ -808,6 +808,179 @@
     </sect1>
     <sect1>
         <title>Repositoris remots I GitHub</title>
-        <para></para>
+        <para>Per veure els Repositoris remots farem servir GitHub </para>
+        <sect2>
+            <title>Crear repositori</title>
+            <para>Per crear un nou repositori anirem al nostre compte de GitHub I ens loguejarem, Un
+                repositori es on tindrem el nostre projecte I anirem afegint els canvis.</para>
+            <para>Per crear un nou repositori clicarem al botó new <inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/090.jpg"/>
+                    </imageobject>
+                </inlinemediaobject>. Escriurem el nom del nostre repositori marcarem que sigui
+                public (Private es pagant) I clicarem el botó Create repository <inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/092.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/091.jpg" align="center" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Un cop creat el repository hem de seguir les instruccions podem crear un nou
+                repositori o fer un push a un repositori que nosaltres tinguem hi han varies
+                opcions. Farem les instruccions que tenim a la imatge.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/093.jpg" align="center" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Anirem a la consola de comandes I crearem el fitxer README.md aquest fitxer la
+                sintàxi d'aquest fitxer és <code>echo "TextQueVulguisAlFitxer" >>
+                README.md.</code></para>
+            <para/>
+            <para>La comanda <code>git init</code> no cal fer-la ja que realment nosaltres ja ho hem
+                fet però si no ho hauriem de fer.</para>
+            <para>El següent pas serà fer el commit del fitxer README.md</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/094.jpg" align="center" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/095.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Afegirem un origen remot, quan afegim un origen remot el que fem es vincular el
+                nostre repositori local a un servidor remot</para>
+            <para><code>git remote add origin llocOnTinguemElNostreRepositoriRemot</code></para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/096.jpg" align="center" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Per pujar els canvis al repositori farem servir la comanda <emphasis role="bold"
+                    >push</emphasis> que el que farà serà pujar els nostres canvis al servidor remot
+                de GIT o la comanda <emphasis role="bold">pull</emphasis> que  serveix per
+                descarregar els canvis que hi ha al repositori remot al nostre repositori
+                local.</para>
+            <para>És interessant fer sempre el push des de la nostra branca master.</para>
+            <para><code>git push origin master</code></para>
+            <para><code>Username for 'http://github.com':</code></para>
+            <para><code>Password for 'http://repositoriGitHub@github.com</code></para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/097.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Això treballarà I un cop acabi ja podrem anar al nostre repositori remot que
+                podrem veure el projecte que teniem en local pujat.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/098.jpg" align="center" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Si volem crear una nova branca des del repositori remot </para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/099.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/100.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Podem anar a la nova branca clicant sobre aquesta.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/101.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Podem afegir un arxiu </para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/102.jpg" align="center" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/103.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/104.jpg" align="center" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>El veurem al nostre repositori.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/105.jpg" align="center" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Podem baixar-nos les branques I fitxers que tenim en remot al nostre repositori
+                local amb la següent comanda fetch:</para>
+            <para><code>git fetch --all</code></para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/106.jpg" align="center" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Ens podem canviar a la branca que hem baixat del fitxer remot al local I veure el
+                fitxer que hi ha dins.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/107.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Podem fer un merge de les dues branques.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/108.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Carregar-nos la branca que hem fet.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/109.jpg" align="center" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Tornar a fer un push.</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/110.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>podem veure que la branca remoteBranch l'hem eliminat a local però no a remot. si
+                la volem esborrar per remot clicarem sobre la icona de la paperera.<inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/111.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/112.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Podem fer modificacions en un fitxer en el nostre repositori remot clicant al
+                fitxer que volguem modificar I al llapis I fent el commit..</para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/113.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para>Un cop tinguem els canvis en aquest fitxer podem fer un pull per baixar aquests
+                canvis al fitxer local.</para>
+            <para><code>git pull origin master </code></para>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="img/114.jpg"/>
+                    </imageobject>
+                </inlinemediaobject></para>
+            <para/>
+        </sect2>
     </sect1>
 </article>

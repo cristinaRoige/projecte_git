@@ -339,7 +339,7 @@
     <sect1>
         <title>Comandes reset i checkout</title>
         <para>Si fem un canvi a un fitxer, per exemple a index.html si per error fem la comanda
-                <code>git add .</code> I ens adonem que ens hem equivocat I el volem tornar al
+                <code>git add .</code> i ens adonem que ens hem equivocat i el volem tornar al
             directori de treball podem fer servir la comanda <code>git reset HEAD nomFitxer</code> o
             bé també podem fer servir la comanda <code>git reset .</code> o bé <code>git checkout
                 nomFitxer</code></para>
@@ -357,7 +357,7 @@
     <sect1>
         <title>Desfer un commit</title>
         <para>Per veure la comanda reset que es fa servir per desfer un commit hem fet diverses
-            modificacions I diversos commits</para>
+            modificacions i diversos commits</para>
         <para><inlinemediaobject>
                 <imageobject>
                     <imagedata fileref="img/040.jpg" align="center" scale="100"/>
@@ -397,7 +397,7 @@
     </sect1>
     <sect1>
         <title>Tornar a un commit anterior</title>
-        <para>Si volem canviar el HEAD dels commits I que aquest sigui el nostre últim commit hem de
+        <para>Si volem canviar el HEAD dels commits i que aquest sigui el nostre últim commit hem de
             fer servir la comanda</para>
         <para><code>git checkout idCommit</code></para>
         <para><inlinemediaobject>
@@ -405,7 +405,7 @@
                     <imagedata fileref="img/045.jpg" align="center" scale="100"/>
                 </imageobject>
             </inlinemediaobject></para>
-        <para>Els commits anteriors no han desaparegut I els podem tornar a recuperar.</para>
+        <para>Els commits anteriors no han desaparegut i els podem tornar a recuperar.</para>
         <para><inlinemediaobject>
                 <imageobject>
                     <imagedata fileref="img/046.jpg" align="center" scale="100"/>
@@ -439,11 +439,11 @@
     </sect1>
     <sect1>
         <title>Branch</title>
-        <para>Les branques (blanch) de desenvolupament permeten ramificar el nostre projecte I
+        <para>Les branques (blanch) de desenvolupament permeten ramificar el nostre projecte i
             tindre diferents línies de desenvolupament, podent desenvolupar altres funcionalitats
             sense que unes interfereixin amb les altres.</para>
-        <para>El més normal és tindre una branch master I mentres anem desenvolupant el projecte
-            sorgeixen noves funcionalitats I nosaltres no volem barrejar aquestes funcionalitats amb
+        <para>El més normal és tindre una branch master i mentres anem desenvolupant el projecte
+            sorgeixen noves funcionalitats i nosaltres no volem barrejar aquestes funcionalitats amb
             la branch master o qualsevol altre branca de desenvolupament.</para>
         <para>Per crear una nova branca farem servir:</para>
         <para><code>git branch nomBranca</code></para>
@@ -456,8 +456,8 @@
                     <imagedata fileref="img/050.jpg"/>
                 </imageobject>
             </inlinemediaobject></para>
-        <para>Fem els canvis preparem I fem el commit I quan fem git log --oneline podem veure que
-            estem a la branca que hem creat que allí hem fet el nostre commit. I la branca master I
+        <para>Fem els canvis preparem i fem el commit i quan fem git log --oneline podem veure que
+            estem a la branca que hem creat que allí hem fet el nostre commit. i la branca master i
             la branca pagina1 no es el mateix.</para>
         <para><inlinemediaobject>
                 <imageobject>
@@ -473,9 +473,9 @@
                 </imageobject>
             </inlinemediaobject></para>
         <para>Si hi hagués algun commit fet dins la branca no ens ho deixaria esborrar ni canviar de
-            branca I primer ens faria un commit.</para>
-        <para>Quan hagim acabat de treballar a una branca I volguem passar el nostre codi a la
-            branca master haurem d'anar a la nostra branca principal I fer un merge, el merge també
+            branca i primer ens faria un commit.</para>
+        <para>Quan hagim acabat de treballar a una branca i volguem passar el nostre codi a la
+            branca master haurem d'anar a la nostra branca principal i fer un merge, el merge també
             serveix per passar el codi de la branca master a la branca que esteu treballant.</para>
         <para><inlinemediaobject>
                 <imageobject>
@@ -500,9 +500,9 @@
         <title>Comanda stash</title>
         <para>la comanda stash permet canviarte a una altra branca que estiguis treballant sense
             emportar-te els canvis que has fet a la pàgina que estaves treballant.</para>
-        <para>Imaginem-nos que estem treballan a la branca principal al fitxer index.html I li fem
-            un canvi. ens ve el jefe I diu deixa el que estas fent I arregla'm la pàgina1.html. el
-            que hauriem de fer és un stash que ens guardaria els canvis fets al fitxer index.html I
+        <para>Imaginem-nos que estem treballan a la branca principal al fitxer index.html i li fem
+            un canvi. ens ve el jefe i diu deixa el que estas fent i arregla'm la pàgina1.html. el
+            que hauriem de fer és un stash que ens guardaria els canvis fets al fitxer index.html i
             els podrem guardar més endavant.</para>
         <para><inlinemediaobject>
                 <imageobject>
@@ -519,7 +519,7 @@
                     <imagedata fileref="img/058.jpg"/>
                 </imageobject>
             </inlinemediaobject></para>
-        <para>Ens podem canviar de branca I si fem un <code>git status</code> podem veure que no ens
+        <para>Ens podem canviar de branca i si fem un <code>git status</code> podem veure que no ens
             hem emportat res de l'altra branca.</para>
         <para><inlinemediaobject>
                 <imageobject>
@@ -539,7 +539,7 @@
                     <imagedata fileref="img/061.jpg"/>
                 </imageobject>
             </inlinemediaobject></para>
-        <para>Podem fer add I commit</para>
+        <para>Podem fer add i commit</para>
         <para><inlinemediaobject>
                 <imageobject>
                     <imagedata fileref="img/062.jpg"/>
@@ -551,14 +551,14 @@
                     <imagedata fileref="img/063.jpg" align="center" scale="100"/>
                 </imageobject>
             </inlinemediaobject></para>
-        <para>Tornem a la branca master I podem veure que en el stash encara tenim els canvis
+        <para>Tornem a la branca master i podem veure que en el stash encara tenim els canvis
             pendents</para>
         <para><inlinemediaobject>
                 <imageobject>
                     <imagedata fileref="img/065.jpg" align="center" scale="100"/>
                 </imageobject>
             </inlinemediaobject></para>
-        <para>Treiem el que teniem a la memoria I els recuperem a l'index</para>
+        <para>Treiem el que teniem a la memoria i els recuperem a l'index</para>
         <para><code>git stash pop</code></para>
         <para><inlinemediaobject>
                 <imageobject>
@@ -570,5 +570,26 @@
     <sect1>
         <title>Comanda cherry-pick</title>
         <para></para>
+        <para>La comanda cherry-pick serveix per fer un merge parcial, això significa que podem estar
+            treballant en una branca, fer la nostra feina amb els commits que ens convinguin i en un
+            moment donat tindre que tornar a la branca que sigui i tindre que exportar només alguns
+            canvis dels que s'estaven fent. </para>
+        <para>A continuació farem un exemple de la comanda cherry-pick</para>
+        <orderedlist>
+            <listitem>
+                <para>Mirem a la branca que estem I com ho tenim.</para>
+                <figure>
+                    <title><code>comanda → git status</code>.</title>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="img/067.jpg" scale="100" align="center"/>
+                        </imageobject>
+                    </mediaobject>
+                </figure>
+            </listitem>
+            <listitem>
+                <para>Crearem un altre full que anomenarem contacte.html i a la pàgina index.html crearem un link per anar aquesta fulla</para>
+            </listitem>
+        </orderedlist>
     </sect1>
 </article>

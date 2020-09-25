@@ -735,6 +735,79 @@
     </sect1>
     <sect1>
         <title>Resolució de conflictes.</title>
+        <para>Quan treballem amb GIT I treballem amb diverses branques sobint ens trobarem amb
+            conflictes. Per exemple, estem a la branca contactes I afegim un paràgraf .</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/079.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/080.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/081.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Canviarem a la branca master</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/082.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Canviarem el mateix paràgraf per crear un conflicte.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/083.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>També farem un commit.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/084.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Ara quan fem un merge sorgiria un conflicte.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/085.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Per solucionar el conflicte el que haurem de fer és anar al fitxer amb conflicte I
+            solucionar-ho. com podem veure GIT ens ha modificat el fitxer mostrant-nos les dues
+            línies; la de la branch HEAD I la de la branch contacte. per solucionar-ho el que
+            hauriem de fer es modificar el full I triar el que volguem quedar-nos com a
+            correcte</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/086.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/087.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Si ara fem <code>git status</code> veurem que ho tenim al directori de treball amb
+            both modified I que espera rebre un git add . I un commit</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/088.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Un cop solucionat el conflicte veurem que un com fet <code>git add .</code> passa a
+            modified I podem fer el merge correctament. </para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/089.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+    </sect1>
+    <sect1>
+        <title>Repositoris remots I GitHub</title>
         <para></para>
     </sect1>
 </article>

@@ -495,6 +495,80 @@
                     <imagedata fileref="img/055.jpg" align="center" scale="100"/>
                 </imageobject>
             </inlinemediaobject></para>
-        <para/>
+    </sect1>
+    <sect1>
+        <title>Comanda stash</title>
+        <para>la comanda stash permet canviarte a una altra branca que estiguis treballant sense
+            emportar-te els canvis que has fet a la pàgina que estaves treballant.</para>
+        <para>Imaginem-nos que estem treballan a la branca principal al fitxer index.html I li fem
+            un canvi. ens ve el jefe I diu deixa el que estas fent I arregla'm la pàgina1.html. el
+            que hauriem de fer és un stash que ens guardaria els canvis fets al fitxer index.html I
+            els podrem guardar més endavant.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/056.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/057.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/058.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Ens podem canviar de branca I si fem un <code>git status</code> podem veure que no ens
+            hem emportat res de l'altra branca.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/059.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>La memoria stash es global així que estant a la branca pagina1 fem <code>git stash
+                show</code> veurem que els canvis continuen pendents</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/060.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Fem els canvis que ens han demanat.</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/061.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Podem fer add I commit</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/062.jpg"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Podem veure que tenim el commit fet</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/063.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Tornem a la branca master I podem veure que en el stash encara tenim els canvis
+            pendents</para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/065.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Treiem el que teniem a la memoria I els recuperem a l'index</para>
+        <para><code>git stash pop</code></para>
+        <para><inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="img/066.jpg" align="center" scale="100"/>
+                </imageobject>
+            </inlinemediaobject></para>
+        <para>Per netejar la memoria stash <code>git stash clear</code></para>
+    </sect1>
+    <sect1>
+        <title>Comanda cherry-pick</title>
+        <para></para>
     </sect1>
 </article>
